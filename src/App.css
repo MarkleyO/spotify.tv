@@ -1,38 +1,120 @@
+/* App Core */
+body {
+  background-color: #FFFCE6;
+}
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Text for Spotify.TV title */
+.title {
+  font-style: italic;
+  color: whitesmoke;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Central Viewing Area */
+.main-window {
+  position: relative;
+  height: 800px;
+  width: 1200px;
+  background-color: #4F4E4B;
+  margin: auto;
+  border-style: ridge;
+  border-radius: 10px;
+  border-color: #42413e;
+}
+img.static-image {
+  border-style: inset;
+  border-width: 5px;
+  border-color: grey;
+  margin-top: 20px;
+}
+.video-container {
+  position: absolute;
+  top: 25px;
+  left: 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* PLAY Button on valid palylist */
+button.start-playlist-button {
+  margin: 15px;
+  position: relative;
+  background: transparent;
+  border: none;
+}
+.button-image.cover-image {
+  position: absolute;
+  top: 0px;
+  cursor: pointer;
+}
+.button-image.cover-image:hover {
+  opacity: 0;
+}
+
+/* Information window on bottom of page */
+.info-col.current-track {
+  margin-right: 15px;
+  margin-left: 30px;
+}
+p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.tracklist-contents {
+  max-height: 100px;
+  height: 100px;
+  overflow-y: scroll;
+  background-color: #bebcab;
+  margin-left: 15px;
+  margin-right: 30px;
+}
+.info-title {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: 30px;
+}
+.current-track-contents {
+  text-align: left;
+  margin-left: 30px;
+}
+.track-name {
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.current-track-row-child {
+  display: inline-block;
+}
+.current-track-row {
+  margin-bottom: 0px;
+}
+.info-row-frame {
+ width: 1200px;
+ margin: auto;
+}
+
+.inner-info-row {
+  height: 150px;
+  width: 1200px;
+  margin: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.info-subsection {
+  flex: 50%
 }
 
-.App-link {
-  color: #61dafb;
+/* Highlighting Current Track */
+.selected {
+  font-weight: bold;
+  font-style: oblique;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Playlist Selector */
+.playlistDropdown {
+  position: relative;
+  font-family: 'Helvetica Neue';
+  margin: 10px;
 }
